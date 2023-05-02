@@ -4,7 +4,7 @@ using AAA.Rinna;
 using UnityEngine.Networking;
 using System;
 
-public class TestManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
     AudioSource audioSource;
 
@@ -19,7 +19,7 @@ public class TestManager : MonoBehaviour
     {
         // rinnaAPIで音声を作成する
         var responceMessage = "りんなエーピーアイをお試し中！";
-        var rinnaAPIConnection = new RinnaAPIConnection("｛ご自身のサブスクリプションキー｝");
+        var rinnaAPIConnection = new RinnaAPIConnection("{ご自身のサブスクリプションキー}");
         var resRinna = await rinnaAPIConnection.RequestAsync(responceMessage);
         var audioUrl = resRinna.mediaContentUrl;
 
